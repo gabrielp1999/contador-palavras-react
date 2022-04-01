@@ -13,40 +13,24 @@ function App() {
 
   
   const displayLetters = () => {
-      setMarcadLetters({
-        show: true
-      });
-
-      if(marcadLetters.show === true){
-      setMarcadLetters(false)
-    }
+      setMarcadLetters(!marcadLetters);
   }
 
-  displayLetters.bind()
-
   const displayWords = () => {
-    setMarcadWords({
-      show2: true
-    })
-    if(marcadWords.show2 === true){
-      setMarcadWords(false)
-    }
+    setMarcadWords(!marcadLetters);
   }
 
   const counter = e => {
-    
-    setText(e.target.value.length);
+    setText(e.target.value);
   }
 
   return (
     <div className="App">
       <Area counter={counter}/>
-      {marcadLetters.show 
-        && <ResultSpan/> ||
-        marcadWords.show2
-        &&<ResultSpan
-        text={text}
-      /> }
+       <ResultSpan 
+        marcadLetters={marcadLetters} 
+        marcadWords={marcadWords} 
+        text={text} />
       <Checkbox
         displayLetters={displayLetters}
         marcadLetters={marcadLetters}
@@ -57,5 +41,6 @@ function App() {
   );
 }
 
-export default App;
 <ResultSpan />
+
+export default App;
