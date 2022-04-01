@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+#area {
+  max-height: 100px;
+  min-width: 370px;
+  resize: none;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+body{
+  background-color: rgba(90, 120, 90, 0.3);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.engloba{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card{
+  font-size: 13px;
+  margin-top: 5px;
+  display: flex;
+  padding: 2px;
+}
+
+input {
+  height: 17px;
+  width: 17px;
+  margin: 0px 5px;
+}
+
+span {
+  margin:0 60px;
+}
