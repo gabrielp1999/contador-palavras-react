@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 
 function ResultSpan(props) {
-  let contWords = 0;
-  if(props.text !== ''){
-    contWords = props.text.split(' ').length;
-  }
+  const [countWords, setCountWords] = useState(0);
+  const [countLetters, setCountLetters] = useState(0);
+
+  useEffect(() => {
+    if(props.text !== ''){
+      setCountWords(props.text.split(' ').length);
+    }else{
+      setCountWords(0);
+    }
+    setCountLetters(props.text.length);
+  }, [props]);
 
   return(
     <div className="engloba"> 
     {props.marcadLetters && (
       <div className="card">
         <span id="numerosLetras">
-          {props.text.length} letras
+          {countLetters} letras
         </span>
       </div>
     )}
     {props.marcadWords && (
       <div id="direita" className="card">
         <span id="numerosPalavras">
-          {contWords} palavras
+          {countWords} palavras
         </span>
       </div>
     )}

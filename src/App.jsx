@@ -17,7 +17,7 @@ function App() {
   }
 
   const displayWords = () => {
-    setMarcadWords(!marcadLetters);
+    setMarcadWords(!marcadWords);
   }
 
   const counter = e => {
@@ -40,7 +40,5 @@ function App() {
     </div>
   );
 }
-
-<ResultSpan />
 
 export default App;
